@@ -119,14 +119,14 @@ namespace EF_Ass_1
             #region Q5
             //try
             //{
-       //     var transactions = DbContext.Transactions
-       //.Where(t => t.Airline.Name == "EgyptAir")
-       //.Select(t => new
-       //{
-       //    t.Id,
-       //    t.Description,
-       //    t.Amount
-       //});
+            //     var transactions = DbContext.Transactions
+            //.Where(t => t.Airline.Name == "EgyptAir")
+            //.Select(t => new
+            //{
+            //    t.Id,
+            //    t.Description,
+            //    t.Amount
+            //});
             //Console.WriteLine(string.Join("\n-----------------\n" , transactions));
             //}
             //catch (Exception ex)
@@ -137,9 +137,104 @@ namespace EF_Ass_1
 
 
             #region Q6
+            //try
+            //{
+
+            //    var data = DbContext.Employees.GroupBy(E => E.Airline.Name)
+            //    .Select(d => new {
+            //        Airline  =d.Key,
+            //        EmployeeCount = d.Count()
+            //    });
+
+            //    Console.WriteLine(string.Join("\n-----------------\n", data));
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("General error: " + ex.Message);
+            //}
+            #endregion
+
+
+            #region Q7
+            //try
+            //{
+            // var  aircraft= DbContext.AirCrafts.FirstOrDefault(t => t.Model== "Model01");
+
+            //    if( aircraft is not null)
+            //    {
+            //        aircraft.Capacity = 200;
+            //        DbContext.SaveChanges();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("General error: " + ex.Message);
+            //}
+            #endregion
+
+            #region Q8
+            //try
+            //{
+
+            //    var transactions = DbContext.Transactions.Where(T => T.Date.Year < 2020);
+            //    if (transactions.Any())
+            //    {
+            //    DbContext.Transactions.RemoveRange(transactions);
+            //    DbContext.SaveChanges();
+            //    Console.WriteLine("DeletedSucces");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("General error: " + ex.Message);
+            //}
+            #endregion
+
+
+            #region Q9
+
+            //try {    
+            //    DbContext.Routes.Add(new Route
+            //    {
+            //        Classification = "International",
+            //        Origin = "Cairo",
+            //        Destination = "Dubai",
+            //        Distance = 2400
+            //    });
+            //    DbContext.SaveChanges();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("General error: " + ex.Message);
+            //}
 
             #endregion
 
+            #region Q10
+            //var assignedRoute1 = 
+
+            //try
+            //{
+            //    DbContext.AssignedRoutes.Add(new AssignedRoute
+            //    {
+            //        AirCraftId = 1,
+            //        RouteId = 1,
+            //        Departure = DateTime.Now,
+            //        Arrival = new DateTime(2026, 1, 15, 12, 45, 0),
+            //        Duration = 4,
+            //        Price = 3000,
+            //        NumOfPassengers = 120
+            //    });
+            //    DbContext.SaveChanges();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("General error: " + ex.Message);
+            //}
+
+
+
+            #endregion
         }
     }
 }
